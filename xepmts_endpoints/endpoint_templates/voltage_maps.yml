@@ -28,6 +28,8 @@ voltage_maps:
             unique: true
             required: true
             regex: ^\S+$
+            minlength: 4
+            maxlength: 45
         experiment: {type: string, allowed: [xenon1t, xenonnt, unknown], default: xenonnt, required: true}
         detector: {type: string, allowed: [tpc, nveto, muveto, unknown], required: true}
         active: {type: boolean, default: true}
@@ -61,4 +63,5 @@ voltage_map_names:
         name: {type: string, unique: true}
         experiment: {type: string, allowed: [xenon1t, xenonnt, unknown], default: xenonnt, required: true}
         detector: {type: string, allowed: [tpc, nveto, muveto, unknown], required: true}
+        comments: {type: string}
 
