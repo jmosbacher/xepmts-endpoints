@@ -9,7 +9,8 @@ voltage_maps:
         field: name
     cache_control: "max-age=10,must-revalidate"
     cache_expires: 10
-    resource_methods: [GET, POST, DELETE]
+    resource_methods: [GET, POST]
+
     embedding: true
     example:
         name: Tribute
@@ -29,7 +30,7 @@ voltage_maps:
             required: true
             regex: ^\S+$
             minlength: 4
-            maxlength: 45
+            maxlength: 60
         experiment: {type: string, allowed: [xenon1t, xenonnt, unknown], default: xenonnt, required: true}
         detector: {type: string, allowed: [tpc, nveto, muveto, unknown], required: true}
         active: {type: boolean, default: true}
