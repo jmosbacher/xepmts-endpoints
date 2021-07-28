@@ -1,0 +1,45 @@
+afterpulse_spectra1d:
+    resource_title: afterpulse_spectra1d
+    item_title: afterpulse_spectrum1d
+    url: afterpulse_spectra1d
+    datasource:
+        source: afterpulse_spectra1d
+    cache_control: "max-age=10,must-revalidate"
+    cache_expires: 10
+    mongo_indexes: {}
+    schema:
+      pmt_index: { type: integer, required: true, min: 0, max: 493}
+      experiment: { type: string, allowed: [xenon1t, xenonnt, unknown], default: xenonnt, required: true}
+      detector: { type: string, allowed: [tpc, nveto, muveto, unknown], required: true}
+      run_id: { type: string, required: true}
+      start_timestamp: { type: number, required: true, min: 0}
+      end_timestamp: { type: number, required: true, min: 0}
+      ion_name: {type: string, allowed: [h, he, ch4, n2, n2double, ar, ardouble, xe, xedouble], required: true}
+      xbinedges_tdelay: {type: list, schema: {type: integer}}
+      hist_tdelay: {type: list, schema: {type: integer}}
+      xfit_tdely: {type: list, schema: {type: float}}
+      yfit_tdelay: {type: list, schema: {type: float}}
+      xbinedges_area: {type: list, schema: {type: float}}
+      hist_area: {type: list, schema: {type: float}}
+
+afterpulse_spectra2d:
+    resource_title: afterpulse_spectra2d
+    item_title: afterpulse_spectrum2d
+    url: afterpulse_spectra2d
+    datasource:
+        source: afterpulse_spectra2d
+    cache_control: "max-age=10,must-revalidate"
+    cache_expires: 10
+    mongo_indexes: {}
+    schema:
+      pmt_index: { type: integer, required: true, min: 0, max: 493}
+      experiment: { type: string, allowed: [xenon1t, xenonnt, unknown], default: xenonnt, required: true}
+      detector: { type: string, allowed: [tpc, nveto, muveto, unknown], required: true}
+      run_id: { type: string, required: true}
+      start_timestamp: { type: number, required: true, min: 0}
+      end_timestamp: { type: number, required: true, min: 0}
+      ion_name: {type: string, allowed: [h, he, ch4, n2, n2double, ar, ardouble, xe, xedouble], required: true}
+      xbinedges: {type: list, schema: {type: integer}}
+      ybinedges: {type: list, schema: {type: float}}
+      hist: {type: list, schema: {type: list, schema: {type: integer}}}
+

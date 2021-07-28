@@ -20,39 +20,10 @@ spe_acceptances:
     acceptance_15ADC_4bin: { type: number, required: true }
     acceptance_15ADC_5bin: { type: number, required: true }
     acceptance_15ADC_6bin: { type: number, required: true }
-    threshold_percent_2bin:
-      type: list
-      required: false
-      schema:
-        type: number
-        minlength: 4
-        maxlength: 4
-    threshold_percent_3bin:
-      type: list
-      required: false
-      schema:
-        type: number
-        minlength: 4
-        maxlength: 4
-    threshold_percent_4bin:
-      type: list
-      required: false
-      schema:
-        type: number
-        minlength: 4
-        maxlength: 4
-    threshold_percent_5bin:
-      type: list
-      required: false
-      schema:
-        type: number
-        minlength: 4
-        maxlength: 4
-    threshold_percent_6bin:
-      type: list
-      required: false
-      schema:
-        type: number
-        minlength: 4
-        maxlength: 4
+    threshold_90percent_2bin: { type: number, required: true }
+    threshold_90percent_3bin: { type: number, required: true }
+    threshold_90percent_4bin: { type: number, required: true }
+    threshold_90percent_5bin: { type: number, required: true }
+    threshold_90percent_6bin: { type: number, required: true }
+
       

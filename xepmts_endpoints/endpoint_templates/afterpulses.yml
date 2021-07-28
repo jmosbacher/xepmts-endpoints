@@ -9,32 +9,24 @@ afterpulses:
     cache_expires: 10
     mongo_indexes: {}
     schema:
-        experiment: {type: string, allowed: [xenon1t, xenonnt, unknown], default: xenonnt, required: true}
-        detector: {type: string, allowed: [tpc, nveto, muveto, unknown], required: true}
-        pmt_index: {type: integer, required: true}
-        run_id: {type: string}
-        timestamp: {type: integer}
-        start_time: {type: integer}
-        end_time: {type: integer}
-        trigger_sigma: {type: number} 
-        total_ap: {type: number}
-        pe: {type: number} 
-        pe_error: {type: number}
-        ar_pos: {type: number} 
-        hv: {type: number} 
-        ne_ap: {type: number}
-        ne_pos: {type: number} 
-        xe_pos: {type: number}
-        n2_pos: {type: number}
-        ch4ap: {type: number}
-        he_ap: {type: number}
-        ar_ap: {type: number}
-        doublexe_pos: {type: number}
-        doublexe_ap: {type: number}
-        trigger_mean: {type: number}
-        gain: {type: number}
-        ch4_pos: {type: number}
-        n2_ap: {type: number}
-        xe_ap: {type: number}
-        pe_pulses: {type: number}
-        trigger_number: {type: number}
+        experiment: { type: string, allowed: [xenon1t, xenonnt, unknown], default: xenonnt, required: true}
+        detector: { type: string, allowed: [tpc, nveto, muveto, unknown], required: true}
+        pmt_index: { type: integer, required: true, min: 0, max: 493}
+        run_id: { type: string, required: true}
+        start_timestamp: { type: number, required: true, min: 0}
+        end_timestamp: { type: number, required: true, min: 0}
+        hv: { type: number, required: true, min: 0}
+        n_ledhits: { type: integer, min: 0}
+        n_pe: { type: integer, min: 0}
+        totrate_above1p5pe: { type: number, min: 0 }
+        totrate_below1p5pe: { type: number, min: 0 }
+        ion_name: {type: string, allowed: [h, he, ch4, n2, n2double, ar, ardouble, xe, xedouble], required: true}
+        pos_theo: { type: number, min: 0 }
+        pos_fit: { type: number, min: 0 }
+        ap_rate: { type: number, min: 0 }
+        ap_rate_err: { type: number, min: 0 }
+        ap_area_mean: { type: number, min: 0 }
+        ap_area_median: { type: number, min: 0 }
+        ap_area_std: { type: number, min: 0 }
+        ap_area_mu: { type: number, min: 0 }
+        ap_area_sig: { type: number, min: 0 }
