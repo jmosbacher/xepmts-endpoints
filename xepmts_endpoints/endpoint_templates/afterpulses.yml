@@ -20,7 +20,7 @@ afterpulses:
         n_pe: { type: integer, min: 0}
         totrate_above1p5pe: { type: number, min: 0 }
         totrate_below1p5pe: { type: number, min: 0 }
-        ion_name: {type: string, allowed: [h, he, ch4, n2, n2double, ar, ardouble, xe, xedouble], required: true}
+        ion_name: {type: string, allowed: [H2+, He+, CH4+, N2+, Ar+, Ar++, Xe++, Xe+], required: true}
         pos_theo: { type: number, min: 0 }
         pos_fit: { type: number, min: 0 }
         ap_rate: { type: number, min: 0 }

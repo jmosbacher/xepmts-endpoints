@@ -14,7 +14,7 @@ afterpulse_spectra1d:
       run_id: { type: string, required: true}
       start_timestamp: { type: number, required: true, min: 0}
       end_timestamp: { type: number, required: true, min: 0}
-      ion_name: {type: string, allowed: [h, he, ch4, n2, n2double, ar, ardouble, xe, xedouble], required: true}
+      ion_name: {type: string, allowed: [H2+, He+, CH4+, N2+, Ar+, Ar++, Xe++, Xe+], required: true}
       xbinedges_tdelay: {type: list, schema: {type: integer}}
       hist_tdelay: {type: list, schema: {type: integer}}
       xfit_tdely: {type: list, schema: {type: float}}
@@ -38,7 +38,7 @@ afterpulse_spectra2d:
       run_id: { type: string, required: true}
       start_timestamp: { type: number, required: true, min: 0}
       end_timestamp: { type: number, required: true, min: 0}
-      ion_name: {type: string, allowed: [h, he, ch4, n2, n2double, ar, ardouble, xe, xedouble], required: true}
+      ion_name: {type: string, allowed: [H2+, He+, CH4+, N2+, Ar+, Ar++, Xe++, Xe+], required: true}
       xbinedges: {type: list, schema: {type: integer}}
       ybinedges: {type: list, schema: {type: float}}
       hist: {type: list, schema: {type: list, schema: {type: integer}}}
